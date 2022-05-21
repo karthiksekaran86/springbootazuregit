@@ -14,6 +14,7 @@ public class Rest1 {
 	
 	@GetMapping("/getName")
     public String getName() {
+		System.out.println("Log test");
 		String session_key = UUID.randomUUID().toString();
 		MDC.put("user_session_key", session_key);
 		log.warn("Warn statement");
@@ -22,6 +23,7 @@ public class Rest1 {
 		log.info("Info statement");
 		log.trace("Trace statement");
 		 
+
         return "MY first spring boot azure app";
     }
 
